@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel;
+using System.Text.Json;
 
 namespace RayTracer
 {
@@ -15,7 +17,13 @@ namespace RayTracer
             {
                 for (int x = 0; x < width; x++)
                 {
-                    float r = x;
+                    Ray ray1 = new Ray(1, 2,3);
+                    Ray ray2 = new Ray(2, 3, 4);
+                    Ray result = ray1 + ray2;
+                    Ray result2 = Ray.Add(ray1, ray2);
+                    Ray result3 = ray1 * 5.0f;
+
+                        float r = x;
                     float g = y;
                     float b = x;
 

@@ -17,13 +17,14 @@ namespace RayTracer
             {
                 for (int x = 0; x < width; x++)
                 {
-                    Ray ray1 = new Ray(1, 2,3);
-                    Ray ray2 = new Ray(2, 3, 4);
-                    Ray result = ray1 + ray2;
-                    Ray result2 = Ray.Add(ray1, ray2);
-                    Ray result3 = ray1 * 5.0f;
+                    Vec3 origin = new Vec3(1, 2, 3);
+                    Vec3 direction = new Vec3(10, 0, 0);
 
-                        float r = x;
+                    Ray r1 = new Ray(origin, direction);
+                    
+                    var pt = r1.at(2.0f);
+
+                    float r = x;
                     float g = y;
                     float b = x;
 

@@ -8,9 +8,9 @@ namespace RayTracer
 {
     class Vec3
     {
-        float x; 
-        float y;
-        float z;
+        public float x; 
+        public float y;
+        public float z;
 
         public Vec3(float x, float y, float z)
         {
@@ -74,6 +74,13 @@ namespace RayTracer
             Vec3 retur = new Vec3(r1.x * val, r1.y * val, r1.z * val);
             return retur;
         }
+        public static Vec3 operator /(Vec3 r1, float val)
+        {
+            Vec3 retur = new Vec3(r1.x / val, r1.y / val, r1.z / val);
+            return retur;
+        }
+
 
     }
+    
 }
